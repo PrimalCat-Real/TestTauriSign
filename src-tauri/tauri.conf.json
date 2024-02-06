@@ -50,12 +50,12 @@
       }
     },
     "updater": {
-      "active": false,
-      "dialog": false,
+      "active": true,
+      "dialog": true,
       "endpoints": [
-        "https://youtu.be/ZXjlZBisYPQ"
+        "http://localhost:8000/tauri-releases/tempus-launcher/{{target}}/{{current_version}}"
       ],
-      "pubkey": ""
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IENCQUVEOTQ4MjJCODk2MDQKUldRRWxyZ2lTTm11eXhDOTNPK2EyTFk2R2ZTYjczUGFXRW83SFVsZFVaWWNvclBDSFQwcGVHZ2gK"
     },
     "allowlist": {
       "all": false,
