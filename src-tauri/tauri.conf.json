@@ -51,7 +51,7 @@
     },
     "updater": {
       "active": true,
-      "dialog": true,
+      "dialog": false,
       "endpoints": [
         "https://tempus.rest:8000/tauri-releases/tempus-launcher/{{target}}/{{current_version}}"
       ],

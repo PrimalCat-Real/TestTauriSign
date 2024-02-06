@@ -3,7 +3,7 @@ import { useDisclosure, useHotkeys } from '@mantine/hooks';
 import { notifications } from '@mantine/notifications';
 import * as tauriEvent from '@tauri-apps/api/event';
 import { relaunch } from '@tauri-apps/api/process';
-import { checkUpdate, installUpdate } from '@tauri-apps/api/updater';
+import { checkUpdate, installUpdate, onUpdaterEvent } from '@tauri-apps/api/updater';
 import { appWindow } from '@tauri-apps/api/window';
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -82,9 +82,15 @@ export default function () {
       return () => promise.then(unlisten => unlisten());
     }, []);
 
+  console.log("test");
+  // const { shouldUpdate, manifest } =  checkUpdate()
+  // // alert(shouldUpdate, manifest)
+  // console.log("test 2", manifest);
     // update checker
     useEffect(() => {
       checkUpdate().then(({ shouldUpdate, manifest }) => {
+        console.log("execute check update", manifest);
+        
         if (shouldUpdate) {
           const { version: newVersion, body: releaseNotes } = manifest;
           const color = colorScheme === 'dark' ? 'teal' : 'teal.8';
@@ -199,6 +205,8 @@ export default function () {
         {showFooter &&
           <AppShellFooter p='md' className={classes.footer}>
             {footerText}
+            test
+            {checkUpdate().manifest ? "test exist" : "test not exist"}
             <Button variant='subtle' size='xs' onClick={() => setFootersSeen(prev => ({ ...prev, [FOOTER]: '' }))}>
               <ImCross />
             </Button>
