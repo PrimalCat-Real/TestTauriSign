@@ -88,8 +88,9 @@ export default function () {
   // console.log("test 2", manifest);
     // update checker
     useEffect(() => {
+      installUpdate()
       checkUpdate().then(({ shouldUpdate, manifest }) => {
-        console.log("execute check update", manifest);
+        console.log("execute check update", shouldUpdate);
         
         if (shouldUpdate) {
           const { version: newVersion, body: releaseNotes } = manifest;
@@ -205,7 +206,7 @@ export default function () {
         {showFooter &&
           <AppShellFooter p='md' className={classes.footer}>
             {footerText}
-            test
+            test1
             {checkUpdate().manifest ? "test exist" : "test not exist"}
             <Button variant='subtle' size='xs' onClick={() => setFootersSeen(prev => ({ ...prev, [FOOTER]: '' }))}>
               <ImCross />

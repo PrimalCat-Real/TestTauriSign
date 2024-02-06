@@ -53,7 +53,7 @@
       "active": true,
       "dialog": false,
       "endpoints": [
-        "https://tempus.rest:8000/tauri-releases/tempus-launcher/{{target}}/{{current_version}}"
+        "https://github.com/PrimalCat-Real/TestTauriSign/releases/download/v0.0.8/latest.json"
       ],
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IENCQUVEOTQ4MjJCODk2MDQKUldRRWxyZ2lTTm11eXhDOTNPK2EyTFk2R2ZTYjczUGFXRW83SFVsZFVaWWNvclBDSFQwcGVHZ2gK"
     },
