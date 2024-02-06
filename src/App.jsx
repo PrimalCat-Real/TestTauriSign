@@ -148,6 +148,7 @@ export default function () {
 
   return <>
     <SimpleBar scrollableNodeProps={{ ref: scrollbarRef }} autoHide={false} className={classes.simpleBar}>
+      <div>Test 2</div>
       <AppShell padding='md'
         header={{ height: 60 }}
         footer={{ height: showFooter ? 60 : undefined }}
